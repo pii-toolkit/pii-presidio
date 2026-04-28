@@ -1,0 +1,52 @@
+[build-system]
+requires = ["hatchling>=1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pii-presidio"
+version = "0.0.0"
+description = "Microsoft Presidio plugin: multi-language recognizers with optional reversible anonymization."
+readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+requires-python = ">=3.10"
+authors = [
+    { name = "Michal Piotrowski", email = "piotrowskimichalwfis@gmail.com" },
+]
+keywords = [
+    "presidio",
+    "presidio-plugin",
+    "pii",
+    "anonymization",
+    "privacy",
+    "gdpr",
+]
+classifiers = [
+    "Development Status :: 1 - Planning",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Security",
+    "Topic :: Text Processing :: Linguistic",
+    "Typing :: Typed",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/pii-toolkit/pii-presidio"
+Repository = "https://github.com/pii-toolkit/pii-presidio"
+Issues = "https://github.com/pii-toolkit/pii-presidio/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pii_presidio"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "src/pii_presidio",
+    "README.md",
+    "LICENSE",
+]
