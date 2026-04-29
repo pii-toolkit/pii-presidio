@@ -2,6 +2,10 @@
 
 Microsoft Presidio plugin: multi-language PII recognizers with reversible anonymization, built on [`pii-core`](https://github.com/pii-toolkit/pii-core) and [`pii-veil`](https://github.com/pii-toolkit/pii-veil).
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pii-toolkit/pii-presidio/blob/main/demo.ipynb)
+
+Try the demo notebook in your browser ([`demo.ipynb`](demo.ipynb)) — no install required.
+
 ## Install
 
 ```bash
@@ -70,6 +74,10 @@ The `Mapping` is the round-trip handle. It uses the same JSON format as standalo
 | `CREDIT_CARD` | `CREDIT_CARD` |
 
 Cross-language types use Presidio's standard names so existing pipelines that filter `entities=["EMAIL_ADDRESS"]` pick our recognizers up unchanged.
+
+## More examples
+
+The [`examples/`](examples) directory has runnable scripts: basic round-trip, persisted Mapping across processes, an LLM workflow with a stand-in model, and advanced recognizer setup (opt-in detectors, custom context, mixing with Presidio's built-ins).
 
 ## Sibling packages
 
